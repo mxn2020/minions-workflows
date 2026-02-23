@@ -192,65 +192,28 @@ pnpm add -g @minions-workflows/cli
 ```
 
 Set `MINIONS_STORE` env var to control where data is stored (default: `.minions/`).
-Storage uses sharded directories: `.minions/<id[0..1]>/<id[2..3]>/<id>.json`
 
 ### Discover Types
 
 ```bash
-# List all MinionTypes with their fields
 workflows types list
-
-# Show detailed schema for a specific type
 workflows types show <type-slug>
 ```
 
-### Create
+### CRUD
 
 ```bash
-# Create with shortcut flags
-workflows create <type> -t "Title" -s "status" -p "priority"
-
-# Create with full field data
-workflows create <type> --data '{ ... }'
-```
-
-### Read
-
-```bash
-# List all Minions of a type
+workflows create <type> -t "Title" -s "status"
 workflows list <type>
-
-# Show a specific Minion
 workflows show <id>
-
-# Search by text
-workflows search "query"
-
-# Output as JSON (for piping)
-workflows list --json
-workflows show <id> --json
-```
-
-### Update
-
-```bash
-# Update fields
 workflows update <id> --data '{ "status": "active" }'
-```
-
-### Delete
-
-```bash
-# Soft-delete (marks as deleted, preserves data)
 workflows delete <id>
+workflows search "query"
 ```
 
 ### Stats & Validation
 
 ```bash
-# Show storage stats
 workflows stats
-
-# Validate a Minion JSON file against its schema
 workflows validate ./my-minion.json
 ```
