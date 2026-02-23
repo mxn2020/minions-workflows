@@ -1,6 +1,12 @@
 ---
 name: minions-workflows
-description: Workflow definitions, step sequences, transitions, and run history
+id: OC-0172
+version: 1.0.0
+description: "Workflow definitions, step sequences, transitions, and run history"
+category: ai
+subcategory: general
+tags: ["minion", "ai", "general"]
+comments:
 ---
 
 # minions-workflows — Agent Skills

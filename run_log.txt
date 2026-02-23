@@ -1,0 +1,999 @@
+publish-npm	Set up job	﻿2026-02-23T17:30:57.6702841Z Current runner version: '2.331.0'
+publish-npm	Set up job	2026-02-23T17:30:57.6736086Z ##[group]Runner Image Provisioner
+publish-npm	Set up job	2026-02-23T17:30:57.6737414Z Hosted Compute Agent
+publish-npm	Set up job	2026-02-23T17:30:57.6738254Z Version: 20260123.484
+publish-npm	Set up job	2026-02-23T17:30:57.6739178Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+publish-npm	Set up job	2026-02-23T17:30:57.6740367Z Build Date: 2026-01-23T19:41:17Z
+publish-npm	Set up job	2026-02-23T17:30:57.6741424Z Worker ID: {592226ec-f6a5-4f0b-9a00-981e267858b0}
+publish-npm	Set up job	2026-02-23T17:30:57.6742528Z Azure Region: eastus
+publish-npm	Set up job	2026-02-23T17:30:57.6743424Z ##[endgroup]
+publish-npm	Set up job	2026-02-23T17:30:57.6746492Z ##[group]Operating System
+publish-npm	Set up job	2026-02-23T17:30:57.6747456Z Ubuntu
+publish-npm	Set up job	2026-02-23T17:30:57.6748154Z 24.04.3
+publish-npm	Set up job	2026-02-23T17:30:57.6748900Z LTS
+publish-npm	Set up job	2026-02-23T17:30:57.6749555Z ##[endgroup]
+publish-npm	Set up job	2026-02-23T17:30:57.6750418Z ##[group]Runner Image
+publish-npm	Set up job	2026-02-23T17:30:57.6751319Z Image: ubuntu-24.04
+publish-npm	Set up job	2026-02-23T17:30:57.6752094Z Version: 20260201.15.1
+publish-npm	Set up job	2026-02-23T17:30:57.6753868Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+publish-npm	Set up job	2026-02-23T17:30:57.6757186Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+publish-npm	Set up job	2026-02-23T17:30:57.6758905Z ##[endgroup]
+publish-npm	Set up job	2026-02-23T17:30:57.6760573Z ##[group]GITHUB_TOKEN Permissions
+publish-npm	Set up job	2026-02-23T17:30:57.6763035Z Contents: read
+publish-npm	Set up job	2026-02-23T17:30:57.6763817Z Metadata: read
+publish-npm	Set up job	2026-02-23T17:30:57.6764665Z ##[endgroup]
+publish-npm	Set up job	2026-02-23T17:30:57.6767712Z Secret source: Actions
+publish-npm	Set up job	2026-02-23T17:30:57.6768841Z Prepare workflow directory
+publish-npm	Set up job	2026-02-23T17:30:57.7220011Z Prepare all required actions
+publish-npm	Set up job	2026-02-23T17:30:57.7275251Z Getting action download info
+publish-npm	Set up job	2026-02-23T17:30:58.0486373Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+publish-npm	Set up job	2026-02-23T17:30:58.1659609Z Download action repository 'pnpm/action-setup@v4' (SHA:41ff72655975bd51cab0327fa583b6e92b6d3061)
+publish-npm	Set up job	2026-02-23T17:30:58.4578711Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+publish-npm	Set up job	2026-02-23T17:30:58.6510281Z Complete job name: publish-npm
+publish-npm	Run actions/checkout@v4	﻿2026-02-23T17:30:58.7227016Z ##[group]Run actions/checkout@v4
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7227874Z with:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7228295Z   repository: mxn2020/minions-workflows
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7229005Z   token: ***
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7229392Z   ssh-strict: true
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7229799Z   ssh-user: git
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7230261Z   persist-credentials: true
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7230705Z   clean: true
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7231107Z   sparse-checkout-cone-mode: true
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7231589Z   fetch-depth: 1
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7231982Z   fetch-tags: false
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7232389Z   show-progress: true
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7232794Z   lfs: false
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7233174Z   submodules: false
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7233584Z   set-safe-directory: true
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.7234237Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8303268Z Syncing repository: mxn2020/minions-workflows
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8305062Z ##[group]Getting Git version info
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8306098Z Working directory is '/home/runner/work/minions-workflows/minions-workflows'
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8307245Z [command]/usr/bin/git version
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8390110Z git version 2.52.0
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8416254Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8429984Z Temporarily overriding HOME='/home/runner/work/_temp/26ee74bf-af1e-4091-b19f-a12782f5e9f9' before making global git config changes
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8431387Z Adding repository directory to the temporary git global config as a safe directory
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8442042Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/minions-workflows/minions-workflows
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8481998Z Deleting the contents of '/home/runner/work/minions-workflows/minions-workflows'
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8485999Z ##[group]Initializing the repository
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8489937Z [command]/usr/bin/git init /home/runner/work/minions-workflows/minions-workflows
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8611125Z hint: Using 'master' as the name for the initial branch. This default branch name
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8612588Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8613911Z hint: to use in all of your new repositories, which will suppress this warning,
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8615165Z hint: call:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8616242Z hint:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8617011Z hint: 	git config --global init.defaultBranch <name>
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8618299Z hint:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8619521Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8621544Z hint: 'development'. The just-created branch can be renamed via this command:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8623083Z hint:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8623992Z hint: 	git branch -m <name>
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8625027Z hint:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8626433Z hint: Disable this message with "git config set advice.defaultBranchName false"
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8628383Z Initialized empty Git repository in /home/runner/work/minions-workflows/minions-workflows/.git/
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8631403Z [command]/usr/bin/git remote add origin https://github.com/mxn2020/minions-workflows
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8665315Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8666619Z ##[group]Disabling automatic garbage collection
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8669305Z [command]/usr/bin/git config --local gc.auto 0
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8697133Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8703560Z ##[group]Setting up auth
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8704283Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.8732745Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9096023Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9129631Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9370823Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9413717Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9654282Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9691256Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9701221Z ##[group]Fetching the repository
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:58.9702677Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +393ed9fb67bc3c88f0fc3bcc5b9f76fa4a00a9f9:refs/tags/v0.1.2
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1768857Z From https://github.com/mxn2020/minions-workflows
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1770357Z  * [new ref]         393ed9fb67bc3c88f0fc3bcc5b9f76fa4a00a9f9 -> v0.1.2
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1795859Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1797485Z ##[group]Determining the checkout info
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1799283Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1802805Z [command]/usr/bin/git sparse-checkout disable
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1843647Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1868432Z ##[group]Checking out the ref
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1871903Z [command]/usr/bin/git checkout --progress --force refs/tags/v0.1.2
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1951885Z Note: switching to 'refs/tags/v0.1.2'.
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1952984Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1953976Z You are in 'detached HEAD' state. You can look around, make experimental
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1956671Z changes and commit them, and you can discard any commits you make in this
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1958394Z state without impacting any branches by switching back to a branch.
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1959545Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1960543Z If you want to create a new branch to retain commits you create, you may
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1962364Z do so (now or later) by using -c with the switch command. Example:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1963251Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1963578Z   git switch -c <new-branch-name>
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1964468Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1964791Z Or undo this operation with:
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1965322Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1965600Z   git switch -
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1966465Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1967171Z Turn off this advice by setting config variable advice.detachedHead to false
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1968279Z 
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1968882Z HEAD is now at 393ed9f chore: bump minions-sdk to v0.2.3 and fix TS
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1971967Z ##[endgroup]
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.1997701Z [command]/usr/bin/git log -1 --format=%H
+publish-npm	Run actions/checkout@v4	2026-02-23T17:30:59.2019409Z 393ed9fb67bc3c88f0fc3bcc5b9f76fa4a00a9f9
+publish-npm	Install pnpm	﻿2026-02-23T17:30:59.2291379Z ##[group]Run pnpm/action-setup@v4
+publish-npm	Install pnpm	2026-02-23T17:30:59.2292473Z with:
+publish-npm	Install pnpm	2026-02-23T17:30:59.2293168Z   version: 9
+publish-npm	Install pnpm	2026-02-23T17:30:59.2293910Z   dest: ~/setup-pnpm
+publish-npm	Install pnpm	2026-02-23T17:30:59.2294726Z   run_install: null
+publish-npm	Install pnpm	2026-02-23T17:30:59.2295562Z   package_json_file: package.json
+publish-npm	Install pnpm	2026-02-23T17:30:59.2296801Z   standalone: false
+publish-npm	Install pnpm	2026-02-23T17:30:59.2297601Z ##[endgroup]
+publish-npm	Install pnpm	2026-02-23T17:30:59.2849199Z ##[group]Running self-installer...
+publish-npm	Install pnpm	2026-02-23T17:30:59.8394729Z Progress: resolved 1, reused 0, downloaded 0, added 0
+publish-npm	Install pnpm	2026-02-23T17:31:00.2039624Z 
+publish-npm	Install pnpm	2026-02-23T17:31:00.2040174Z dependencies:
+publish-npm	Install pnpm	2026-02-23T17:31:00.2040673Z + pnpm 9
+publish-npm	Install pnpm	2026-02-23T17:31:00.2040937Z 
+publish-npm	Install pnpm	2026-02-23T17:31:00.2099289Z Packages: +1
+publish-npm	Install pnpm	2026-02-23T17:31:00.2099799Z +
+publish-npm	Install pnpm	2026-02-23T17:31:00.2783828Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+publish-npm	Install pnpm	2026-02-23T17:31:00.3051634Z Done in 848ms
+publish-npm	Install pnpm	2026-02-23T17:31:00.3202561Z ##[endgroup]
+publish-npm	Install pnpm	2026-02-23T17:31:00.3207684Z Installation Completed!
+publish-npm	Use Node.js 20	﻿2026-02-23T17:31:00.3371568Z ##[group]Run actions/setup-node@v4
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3371925Z with:
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3372140Z   node-version: 20
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3372371Z   cache: pnpm
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3372657Z   registry-url: https://registry.npmjs.org
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3372975Z   always-auth: false
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3373217Z   check-latest: false
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3373604Z   token: ***
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3373819Z env:
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3374128Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.3374457Z ##[endgroup]
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.5203798Z Found in cache @ /opt/hostedtoolcache/node/20.20.0/x64
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.5210775Z ##[group]Environment details
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.8972182Z node: v20.20.0
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.8972905Z npm: 10.8.2
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.8973235Z yarn: 1.22.22
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.8974007Z ##[endgroup]
+publish-npm	Use Node.js 20	2026-02-23T17:31:00.9001618Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+publish-npm	Use Node.js 20	2026-02-23T17:31:01.2973093Z /home/runner/setup-pnpm/node_modules/.bin/store/v3
+publish-npm	Use Node.js 20	2026-02-23T17:31:01.4489833Z pnpm cache is not found
+publish-npm	Install dependencies	﻿2026-02-23T17:31:01.4597010Z ##[group]Run pnpm install
+publish-npm	Install dependencies	2026-02-23T17:31:01.4597343Z [36;1mpnpm install[0m
+publish-npm	Install dependencies	2026-02-23T17:31:01.4644821Z shell: /usr/bin/bash -e {0}
+publish-npm	Install dependencies	2026-02-23T17:31:01.4645088Z env:
+publish-npm	Install dependencies	2026-02-23T17:31:01.4645326Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+publish-npm	Install dependencies	2026-02-23T17:31:01.4645967Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+publish-npm	Install dependencies	2026-02-23T17:31:01.4646330Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+publish-npm	Install dependencies	2026-02-23T17:31:01.4646592Z ##[endgroup]
+publish-npm	Install dependencies	2026-02-23T17:31:01.8814528Z Scope: all 6 workspace projects
+publish-npm	Install dependencies	2026-02-23T17:31:01.9449581Z Lockfile is up to date, resolution step is skipped
+publish-npm	Install dependencies	2026-02-23T17:31:02.0957046Z Packages: +519
+publish-npm	Install dependencies	2026-02-23T17:31:02.0967935Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+publish-npm	Install dependencies	2026-02-23T17:31:02.3282939Z Progress: resolved 0, reused 0, downloaded 1, added 0
+publish-npm	Install dependencies	2026-02-23T17:31:03.3289687Z Progress: resolved 0, reused 0, downloaded 75, added 69
+publish-npm	Install dependencies	2026-02-23T17:31:04.3302987Z Progress: resolved 0, reused 0, downloaded 216, added 216
+publish-npm	Install dependencies	2026-02-23T17:31:05.3299587Z Progress: resolved 0, reused 0, downloaded 426, added 426
+publish-npm	Install dependencies	2026-02-23T17:31:06.3311412Z Progress: resolved 0, reused 0, downloaded 515, added 518
+publish-npm	Install dependencies	2026-02-23T17:31:07.5479302Z Progress: resolved 0, reused 0, downloaded 516, added 518
+publish-npm	Install dependencies	2026-02-23T17:31:07.6463375Z Progress: resolved 0, reused 0, downloaded 516, added 519, done
+publish-npm	Install dependencies	2026-02-23T17:31:07.6577747Z node_modules/esbuild postinstall$ node install.js
+publish-npm	Install dependencies	2026-02-23T17:31:07.6584609Z node_modules/vite/node_modules/esbuild postinstall$ node install.js
+publish-npm	Install dependencies	2026-02-23T17:31:07.6591602Z node_modules/sharp install$ node install/check.js || npm run build
+publish-npm	Install dependencies	2026-02-23T17:31:07.7211852Z node_modules/esbuild postinstall: Done
+publish-npm	Install dependencies	2026-02-23T17:31:07.7288838Z node_modules/vite/node_modules/esbuild postinstall: Done
+publish-npm	Install dependencies	2026-02-23T17:31:07.7646577Z node_modules/sharp install: Done
+publish-npm	Install dependencies	2026-02-23T17:31:07.9359607Z 
+publish-npm	Install dependencies	2026-02-23T17:31:08.0185069Z Done in 6.5s using pnpm v9.15.9
+publish-npm	Lint	﻿2026-02-23T17:31:08.0520875Z ##[group]Run pnpm run lint
+publish-npm	Lint	2026-02-23T17:31:08.0521167Z [36;1mpnpm run lint[0m
+publish-npm	Lint	2026-02-23T17:31:08.0553762Z shell: /usr/bin/bash -e {0}
+publish-npm	Lint	2026-02-23T17:31:08.0553999Z env:
+publish-npm	Lint	2026-02-23T17:31:08.0554230Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+publish-npm	Lint	2026-02-23T17:31:08.0554579Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+publish-npm	Lint	2026-02-23T17:31:08.0554897Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+publish-npm	Lint	2026-02-23T17:31:08.0555161Z ##[endgroup]
+publish-npm	Lint	2026-02-23T17:31:08.4530899Z 
+publish-npm	Lint	2026-02-23T17:31:08.4532078Z > minions-workflows-workspace@0.1.0 lint /home/runner/work/minions-workflows/minions-workflows
+publish-npm	Lint	2026-02-23T17:31:08.4534436Z > pnpm --filter @minions-workflows/sdk run build && pnpm --filter @minions-workflows/sdk run lint && pnpm --filter @minions-workflows/cli run lint
+publish-npm	Lint	2026-02-23T17:31:08.4535907Z 
+publish-npm	Lint	2026-02-23T17:31:08.8761840Z 
+publish-npm	Lint	2026-02-23T17:31:08.8763004Z > @minions-workflows/sdk@0.1.0 build /home/runner/work/minions-workflows/minions-workflows/packages/core
+publish-npm	Lint	2026-02-23T17:31:08.8763660Z > tsc
+publish-npm	Lint	2026-02-23T17:31:08.8763852Z 
+publish-npm	Lint	2026-02-23T17:31:10.3871075Z 
+publish-npm	Lint	2026-02-23T17:31:10.3872411Z > @minions-workflows/sdk@0.1.0 lint /home/runner/work/minions-workflows/minions-workflows/packages/core
+publish-npm	Lint	2026-02-23T17:31:10.3873200Z > tsc --noEmit
+publish-npm	Lint	2026-02-23T17:31:10.3873365Z 
+publish-npm	Lint	2026-02-23T17:31:11.8664556Z 
+publish-npm	Lint	2026-02-23T17:31:11.8665924Z > @minions-workflows/cli@0.1.0 lint /home/runner/work/minions-workflows/minions-workflows/packages/cli
+publish-npm	Lint	2026-02-23T17:31:11.8666701Z > tsc --noEmit
+publish-npm	Lint	2026-02-23T17:31:11.8666895Z 
+publish-npm	Build	﻿2026-02-23T17:31:13.0488873Z ##[group]Run pnpm run build
+publish-npm	Build	2026-02-23T17:31:13.0489174Z [36;1mpnpm run build[0m
+publish-npm	Build	2026-02-23T17:31:13.0521484Z shell: /usr/bin/bash -e {0}
+publish-npm	Build	2026-02-23T17:31:13.0521719Z env:
+publish-npm	Build	2026-02-23T17:31:13.0521951Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+publish-npm	Build	2026-02-23T17:31:13.0522299Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+publish-npm	Build	2026-02-23T17:31:13.0522630Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+publish-npm	Build	2026-02-23T17:31:13.0522890Z ##[endgroup]
+publish-npm	Build	2026-02-23T17:31:13.4466906Z 
+publish-npm	Build	2026-02-23T17:31:13.4468067Z > minions-workflows-workspace@0.1.0 build /home/runner/work/minions-workflows/minions-workflows
+publish-npm	Build	2026-02-23T17:31:13.4471162Z > pnpm --filter @minions-workflows/sdk run build && pnpm --filter @minions-workflows/cli run build && pnpm --filter @minions-workflows/docs run build && pnpm --filter @minions-workflows/blog run build && pnpm --filter @minions-workflows/web run build
+publish-npm	Build	2026-02-23T17:31:13.4472298Z 
+publish-npm	Build	2026-02-23T17:31:13.8629823Z 
+publish-npm	Build	2026-02-23T17:31:13.8630935Z > @minions-workflows/sdk@0.1.0 build /home/runner/work/minions-workflows/minions-workflows/packages/core
+publish-npm	Build	2026-02-23T17:31:13.8631705Z > tsc
+publish-npm	Build	2026-02-23T17:31:13.8631846Z 
+publish-npm	Build	2026-02-23T17:31:15.3644415Z 
+publish-npm	Build	2026-02-23T17:31:15.3645559Z > @minions-workflows/cli@0.1.0 build /home/runner/work/minions-workflows/minions-workflows/packages/cli
+publish-npm	Build	2026-02-23T17:31:15.3646691Z > tsc
+publish-npm	Build	2026-02-23T17:31:15.3646852Z 
+publish-npm	Build	2026-02-23T17:31:16.9961921Z 
+publish-npm	Build	2026-02-23T17:31:16.9963293Z > @minions-workflows/docs@0.1.0 build /home/runner/work/minions-workflows/minions-workflows/apps/docs
+publish-npm	Build	2026-02-23T17:31:16.9964421Z > astro build && npx pagefind --site dist
+publish-npm	Build	2026-02-23T17:31:16.9964804Z 
+publish-npm	Build	2026-02-23T17:31:18.6838879Z 
+publish-npm	Build	2026-02-23T17:31:18.6839812Z Auto-generating collections for folders in "src/content/" that are not defined as collections.
+publish-npm	Build	2026-02-23T17:31:18.6840634Z This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+publish-npm	Build	2026-02-23T17:31:18.6841798Z The following collections have been auto-generated: [32mdocs[39m
+publish-npm	Build	2026-02-23T17:31:18.6842082Z 
+publish-npm	Build	2026-02-23T17:31:18.6862881Z [2m17:31:18[22m [34m[content][39m Syncing content
+publish-npm	Build	2026-02-23T17:31:19.0610618Z [2m17:31:19[22m [34m[content][39m Synced content
+publish-npm	Build	2026-02-23T17:31:19.0615532Z [2m17:31:19[22m [34m[types][39m Generated [2m456ms[22m
+publish-npm	Build	2026-02-23T17:31:19.0619136Z [2m17:31:19[22m [34m[build][39m output: [34m"static"[39m
+publish-npm	Build	2026-02-23T17:31:19.0619819Z [2m17:31:19[22m [34m[build][39m mode: [34m"static"[39m
+publish-npm	Build	2026-02-23T17:31:19.0620648Z [2m17:31:19[22m [34m[build][39m directory: [34m/home/runner/work/minions-workflows/minions-workflows/apps/docs/dist/[39m
+publish-npm	Build	2026-02-23T17:31:19.0621339Z [2m17:31:19[22m [34m[build][39m Collecting build info...
+publish-npm	Build	2026-02-23T17:31:19.0624556Z [2m17:31:19[22m [34m[build][39m [32m✓ Completed in 601ms.[39m
+publish-npm	Build	2026-02-23T17:31:19.0634961Z [2m17:31:19[22m [34m[build][39m Building static entrypoints...
+publish-npm	Build	2026-02-23T17:31:21.0116618Z [2m17:31:21[22m [34m[vite][39m [32m✓ built in 1.92s[39m
+publish-npm	Build	2026-02-23T17:31:21.0117630Z [2m17:31:21[22m [34m[build][39m [32m✓ Completed in 1.95s.[39m
+publish-npm	Build	2026-02-23T17:31:21.0121249Z 
+publish-npm	Build	2026-02-23T17:31:21.0121642Z [42m[30m building client (vite) [39m[49m
+publish-npm	Build	2026-02-23T17:31:21.0225815Z [2m17:31:21[22m [34m[vite][39m transforming...
+publish-npm	Build	2026-02-23T17:31:21.2176554Z [2m17:31:21[22m [34m[vite][39m [32m✓[39m 18 modules transformed.
+publish-npm	Build	2026-02-23T17:31:21.2403699Z [2m17:31:21[22m [34m[vite][39m rendering chunks...
+publish-npm	Build	2026-02-23T17:31:21.2697687Z [2m17:31:21[22m [34m[vite][39m computing gzip size...
+publish-npm	Build	2026-02-23T17:31:21.2725066Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[32mec.0vx5m.js                                                             [39m[1m[2m 2.52 kB[22m[1m[22m
+publish-npm	Build	2026-02-23T17:31:21.2727631Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[35mec.v4551.css                                                            [39m[1m[2m18.22 kB[22m[1m[22m[2m │ gzip:  3.96 kB[22m
+publish-npm	Build	2026-02-23T17:31:21.2730562Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mMobileTableOfContents.astro_astro_type_script_index_0_lang.hwBsy0Mo.js  [39m[1m[2m 0.67 kB[22m[1m[22m[2m │ gzip:  0.40 kB[22m
+publish-npm	Build	2026-02-23T17:31:21.2733871Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mTableOfContents.astro_astro_type_script_index_0_lang.FuRcXuRY.js        [39m[1m[2m 2.06 kB[22m[1m[22m[2m │ gzip:  0.97 kB[22m
+publish-npm	Build	2026-02-23T17:31:21.2737024Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mpage.B1D-nYk3.js                                                        [39m[1m[2m 2.24 kB[22m[1m[22m[2m │ gzip:  1.01 kB[22m
+publish-npm	Build	2026-02-23T17:31:21.2739643Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mSearch.astro_astro_type_script_index_0_lang.cjYDvRdi.js                 [39m[1m[2m 2.69 kB[22m[1m[22m[2m │ gzip:  1.38 kB[22m
+publish-npm	Build	2026-02-23T17:31:21.2742310Z [2m17:31:21[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mui-core.D_Lfcn_I.js                                                     [39m[1m[2m72.93 kB[22m[1m[22m[2m │ gzip: 22.86 kB[22m
+publish-npm	Build	2026-02-23T17:31:21.2743912Z [2m17:31:21[22m [34m[vite][39m [32m✓ built in 257ms[39m
+publish-npm	Build	2026-02-23T17:31:21.2908568Z 
+publish-npm	Build	2026-02-23T17:31:21.2909713Z [42m[30m generating static routes [39m[49m
+publish-npm	Build	2026-02-23T17:31:21.3164978Z [2m17:31:21[22m [32m▶[39m /404
+publish-npm	Build	2026-02-23T17:31:21.3216547Z Entry docs → 404 was not found.
+publish-npm	Build	2026-02-23T17:31:21.3366433Z [2m17:31:21[22m   [34m└─[39m [2m/404.html[22m [2m(+20ms)[22m 
+publish-npm	Build	2026-02-23T17:31:21.3395088Z [2m17:31:21[22m [32m▶[39m /[...slug]
+publish-npm	Build	2026-02-23T17:31:21.3399969Z [2m17:31:21[22m [32m✓ Completed in 64ms.
+publish-npm	Build	2026-02-23T17:31:21.3400278Z [39m
+publish-npm	Build	2026-02-23T17:31:21.3432127Z [2m17:31:21[22m [34m[starlight:pagefind][39m Building search index with Pagefind...
+publish-npm	Build	2026-02-23T17:31:21.3579059Z [2m17:31:21[22m [34m[starlight:pagefind][39m Found 1 HTML files.
+publish-npm	Build	2026-02-23T17:31:21.3629801Z [2m17:31:21[22m [34m[starlight:pagefind][39m Finished building search index in 20ms.
+publish-npm	Build	2026-02-23T17:31:21.3642684Z [33m[1m17:31:21[22m [WARN] [@astrojs/sitemap][39m No pages found!
+publish-npm	Build	2026-02-23T17:31:21.3643163Z `sitemap-index.xml` not created.
+publish-npm	Build	2026-02-23T17:31:21.3644472Z [2m17:31:21[22m [34m[build][39m 1 page(s) built in [1m2.90s[22m
+publish-npm	Build	2026-02-23T17:31:21.3644971Z [2m17:31:21[22m [34m[build][39m [1mComplete![22m
+publish-npm	Build	2026-02-23T17:31:22.0467658Z 
+publish-npm	Build	2026-02-23T17:31:22.0468294Z Running Pagefind v1.4.0 (Extended)
+publish-npm	Build	2026-02-23T17:31:22.0468929Z Running from: "/home/runner/work/minions-workflows/minions-workflows/apps/docs"
+publish-npm	Build	2026-02-23T17:31:22.0469361Z Source:       "dist"
+publish-npm	Build	2026-02-23T17:31:22.0469590Z Output:       "dist/pagefind"
+publish-npm	Build	2026-02-23T17:31:22.0469752Z 
+publish-npm	Build	2026-02-23T17:31:22.0469853Z [Walking source directory]
+publish-npm	Build	2026-02-23T17:31:22.0474432Z Found 1 file matching **/*.{html}
+publish-npm	Build	2026-02-23T17:31:22.0474717Z 
+publish-npm	Build	2026-02-23T17:31:22.0474844Z [Parsing files]
+publish-npm	Build	2026-02-23T17:31:22.0515418Z Did not find a data-pagefind-body element on the site.
+publish-npm	Build	2026-02-23T17:31:22.0516450Z ↳ Indexing all <body> elements on the site.
+publish-npm	Build	2026-02-23T17:31:22.0516806Z 
+publish-npm	Build	2026-02-23T17:31:22.0516988Z [Reading languages]
+publish-npm	Build	2026-02-23T17:31:22.0517357Z Discovered 1 language: en
+publish-npm	Build	2026-02-23T17:31:22.0517537Z 
+publish-npm	Build	2026-02-23T17:31:22.0517633Z [Building search indexes]
+publish-npm	Build	2026-02-23T17:31:22.0517840Z Total: 
+publish-npm	Build	2026-02-23T17:31:22.0518011Z   Indexed 1 language
+publish-npm	Build	2026-02-23T17:31:22.0518215Z   Indexed 1 page
+publish-npm	Build	2026-02-23T17:31:22.0518406Z   Indexed 20 words
+publish-npm	Build	2026-02-23T17:31:22.0518586Z   Indexed 0 filters
+publish-npm	Build	2026-02-23T17:31:22.0518775Z   Indexed 0 sorts
+publish-npm	Build	2026-02-23T17:31:22.0550002Z 
+publish-npm	Build	2026-02-23T17:31:22.0550312Z Finished in 0.008 seconds
+publish-npm	Build	2026-02-23T17:31:22.4816731Z 
+publish-npm	Build	2026-02-23T17:31:22.4818028Z > @minions-workflows/blog@0.1.0 build /home/runner/work/minions-workflows/minions-workflows/apps/blog
+publish-npm	Build	2026-02-23T17:31:22.4819141Z > astro build && npx pagefind --site dist
+publish-npm	Build	2026-02-23T17:31:22.4819555Z 
+publish-npm	Build	2026-02-23T17:31:23.6915080Z [2m17:31:23[22m [34m[content][39m Syncing content
+publish-npm	Build	2026-02-23T17:31:23.6950984Z [2m17:31:23[22m [34m[content][39m Synced content
+publish-npm	Build	2026-02-23T17:31:23.6965895Z [2m17:31:23[22m [34m[types][39m Generated [2m145ms[22m
+publish-npm	Build	2026-02-23T17:31:23.6968162Z [2m17:31:23[22m [34m[build][39m output: [34m"static"[39m
+publish-npm	Build	2026-02-23T17:31:23.6969137Z [2m17:31:23[22m [34m[build][39m mode: [34m"static"[39m
+publish-npm	Build	2026-02-23T17:31:23.6970656Z [2m17:31:23[22m [34m[build][39m directory: [34m/home/runner/work/minions-workflows/minions-workflows/apps/blog/dist/[39m
+publish-npm	Build	2026-02-23T17:31:23.6972008Z [2m17:31:23[22m [34m[build][39m Collecting build info...
+publish-npm	Build	2026-02-23T17:31:23.6973037Z [2m17:31:23[22m [34m[build][39m [32m✓ Completed in 176ms.[39m
+publish-npm	Build	2026-02-23T17:31:23.6977325Z [2m17:31:23[22m [34m[build][39m Building static entrypoints...
+publish-npm	Build	2026-02-23T17:31:24.6550237Z [2m17:31:24[22m [34m[vite][39m [32m✓ built in 878ms[39m
+publish-npm	Build	2026-02-23T17:31:24.6551345Z [2m17:31:24[22m [34m[build][39m [32m✓ Completed in 957ms.[39m
+publish-npm	Build	2026-02-23T17:31:24.6555522Z 
+publish-npm	Build	2026-02-23T17:31:24.6556426Z [42m[30m building client (vite) [39m[49m
+publish-npm	Build	2026-02-23T17:31:24.6620806Z [2m17:31:24[22m [34m[vite][39m transforming...
+publish-npm	Build	2026-02-23T17:31:25.3572459Z [2m17:31:25[22m [34m[vite][39m [32m✓[39m 21 modules transformed.
+publish-npm	Build	2026-02-23T17:31:25.4564152Z [2m17:31:25[22m [34m[vite][39m rendering chunks...
+publish-npm	Build	2026-02-23T17:31:25.4583385Z [2m17:31:25[22m [34m[vite][39m computing gzip size...
+publish-npm	Build	2026-02-23T17:31:25.4646041Z [2m17:31:25[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mclient.T9fhd2RU.js  [39m[1m[2m194.63 kB[22m[1m[22m[2m │ gzip: 60.99 kB[22m
+publish-npm	Build	2026-02-23T17:31:25.4646892Z [2m17:31:25[22m [34m[vite][39m [32m✓ built in 806ms[39m
+publish-npm	Build	2026-02-23T17:31:25.4901307Z 
+publish-npm	Build	2026-02-23T17:31:25.4902078Z [42m[30m generating static routes [39m[49m
+publish-npm	Build	2026-02-23T17:31:25.4947049Z [2m17:31:25[22m [32m▶[39m src/pages/posts/welcome.md
+publish-npm	Build	2026-02-23T17:31:25.5014795Z [2m17:31:25[22m   [34m└─[39m [2m/posts/welcome/index.html[22m [2m(+6ms)[22m 
+publish-npm	Build	2026-02-23T17:31:25.5062890Z [2m17:31:25[22m [32m▶[39m src/pages/index.astro
+publish-npm	Build	2026-02-23T17:31:25.5082050Z [2m17:31:25[22m   [34m└─[39m [2m/index.html[22m [2m(+2ms)[22m 
+publish-npm	Build	2026-02-23T17:31:25.5082817Z [2m17:31:25[22m [32m✓ Completed in 40ms.
+publish-npm	Build	2026-02-23T17:31:25.5083165Z [39m
+publish-npm	Build	2026-02-23T17:31:25.5176607Z [2m17:31:25[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+publish-npm	Build	2026-02-23T17:31:25.5177851Z [2m17:31:25[22m [34m[build][39m 2 page(s) built in [1m2.00s[22m
+publish-npm	Build	2026-02-23T17:31:25.5178477Z [2m17:31:25[22m [34m[build][39m [1mComplete![22m
+publish-npm	Build	2026-02-23T17:31:25.8830058Z 
+publish-npm	Build	2026-02-23T17:31:25.8830721Z Running Pagefind v1.4.0 (Extended)
+publish-npm	Build	2026-02-23T17:31:25.8831653Z Running from: "/home/runner/work/minions-workflows/minions-workflows/apps/blog"
+publish-npm	Build	2026-02-23T17:31:25.8832361Z Source:       "dist"
+publish-npm	Build	2026-02-23T17:31:25.8832740Z Output:       "dist/pagefind"
+publish-npm	Build	2026-02-23T17:31:25.8833003Z 
+publish-npm	Build	2026-02-23T17:31:25.8833184Z [Walking source directory]
+publish-npm	Build	2026-02-23T17:31:25.8837786Z Found 2 files matching **/*.{html}
+publish-npm	Build	2026-02-23T17:31:25.8838171Z 
+publish-npm	Build	2026-02-23T17:31:25.8838322Z [Parsing files]
+publish-npm	Build	2026-02-23T17:31:25.8884988Z Did not find a data-pagefind-body element on the site.
+publish-npm	Build	2026-02-23T17:31:25.8886260Z ↳ Indexing all <body> elements on the site.
+publish-npm	Build	2026-02-23T17:31:25.8886611Z 
+publish-npm	Build	2026-02-23T17:31:25.8886774Z [Reading languages]
+publish-npm	Build	2026-02-23T17:31:25.8887155Z Discovered 1 language: en
+publish-npm	Build	2026-02-23T17:31:25.8887396Z 
+publish-npm	Build	2026-02-23T17:31:25.8887578Z [Building search indexes]
+publish-npm	Build	2026-02-23T17:31:25.8887954Z Total: 
+publish-npm	Build	2026-02-23T17:31:25.8888269Z   Indexed 1 language
+publish-npm	Build	2026-02-23T17:31:25.8888643Z   Indexed 2 pages
+publish-npm	Build	2026-02-23T17:31:25.8888980Z   Indexed 57 words
+publish-npm	Build	2026-02-23T17:31:25.8889312Z   Indexed 0 filters
+publish-npm	Build	2026-02-23T17:31:25.8889652Z   Indexed 0 sorts
+publish-npm	Build	2026-02-23T17:31:25.8933405Z 
+publish-npm	Build	2026-02-23T17:31:25.8933781Z Finished in 0.010 seconds
+publish-npm	Build	2026-02-23T17:31:26.3160304Z 
+publish-npm	Build	2026-02-23T17:31:26.3161525Z > @minions-workflows/web@0.1.0 build /home/runner/work/minions-workflows/minions-workflows/apps/web
+publish-npm	Build	2026-02-23T17:31:26.3162201Z > tsc && vite build
+publish-npm	Build	2026-02-23T17:31:26.3162408Z 
+publish-npm	Build	2026-02-23T17:31:27.8827648Z [36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+publish-npm	Build	2026-02-23T17:31:28.0463360Z transforming...
+publish-npm	Build	2026-02-23T17:31:28.8965007Z [32m✓[39m 30 modules transformed.
+publish-npm	Build	2026-02-23T17:31:29.0285503Z rendering chunks...
+publish-npm	Build	2026-02-23T17:31:29.0339677Z computing gzip size...
+publish-npm	Build	2026-02-23T17:31:29.0407792Z [2mdist/[22m[32mindex.html                 [39m[1m[2m  0.57 kB[22m[1m[22m[2m │ gzip:  0.36 kB[22m
+publish-npm	Build	2026-02-23T17:31:29.0409324Z [2mdist/[22m[2massets/[22m[35mindex-DMwAZ8TE.css  [39m[1m[2m  5.52 kB[22m[1m[22m[2m │ gzip:  1.86 kB[22m
+publish-npm	Build	2026-02-23T17:31:29.0410868Z [2mdist/[22m[2massets/[22m[36mindex-DBA_GT1N.js   [39m[1m[2m194.56 kB[22m[1m[22m[2m │ gzip: 61.07 kB[22m
+publish-npm	Build	2026-02-23T17:31:29.0411773Z [32m✓ built in 1.14s[39m
+publish-npm	Test	﻿2026-02-23T17:31:29.0800345Z ##[group]Run pnpm run test
+publish-npm	Test	2026-02-23T17:31:29.0800632Z [36;1mpnpm run test[0m
+publish-npm	Test	2026-02-23T17:31:29.0833001Z shell: /usr/bin/bash -e {0}
+publish-npm	Test	2026-02-23T17:31:29.0833241Z env:
+publish-npm	Test	2026-02-23T17:31:29.0833506Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+publish-npm	Test	2026-02-23T17:31:29.0833863Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+publish-npm	Test	2026-02-23T17:31:29.0834190Z   NODE_AUTH_TOKEN: XXXXX-XXXXX-XXXXX-XXXXX
+publish-npm	Test	2026-02-23T17:31:29.0834446Z ##[endgroup]
+publish-npm	Test	2026-02-23T17:31:29.4639532Z 
+publish-npm	Test	2026-02-23T17:31:29.4640494Z > minions-workflows-workspace@0.1.0 test /home/runner/work/minions-workflows/minions-workflows
+publish-npm	Test	2026-02-23T17:31:29.4641617Z > pnpm --filter @minions-workflows/sdk run test
+publish-npm	Test	2026-02-23T17:31:29.4642015Z 
+publish-npm	Test	2026-02-23T17:31:29.8705953Z 
+publish-npm	Test	2026-02-23T17:31:29.8706860Z > @minions-workflows/sdk@0.1.0 test /home/runner/work/minions-workflows/minions-workflows/packages/core
+publish-npm	Test	2026-02-23T17:31:29.8707576Z > vitest run
+publish-npm	Test	2026-02-23T17:31:29.8707760Z 
+publish-npm	Test	2026-02-23T17:31:30.1972208Z 
+publish-npm	Test	2026-02-23T17:31:30.1975240Z [1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/home/runner/work/minions-workflows/minions-workflows/packages/core[39m
+publish-npm	Test	2026-02-23T17:31:30.1976471Z 
+publish-npm	Test	2026-02-23T17:31:30.3792087Z  [32m✓[39m test/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+publish-npm	Test	2026-02-23T17:31:30.3822529Z 
+publish-npm	Test	2026-02-23T17:31:30.3826550Z [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+publish-npm	Test	2026-02-23T17:31:30.3827460Z [2m      Tests [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+publish-npm	Test	2026-02-23T17:31:30.3828071Z [2m   Start at [22m 17:31:30
+publish-npm	Test	2026-02-23T17:31:30.3830200Z [2m   Duration [22m 178ms[2m (transform 42ms, setup 0ms, import 54ms, tests 3ms, environment 0ms)[22m
+publish-npm	Test	2026-02-23T17:31:30.3830835Z 
+publish-npm	Publish @minions-workflows/sdk	﻿2026-02-23T17:31:30.4470445Z ##[group]Run pnpm --filter @minions-workflows/sdk publish --no-git-checks --access public
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4471141Z [36;1mpnpm --filter @minions-workflows/sdk publish --no-git-checks --access public[0m
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4502514Z shell: /usr/bin/bash -e {0}
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4502742Z env:
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4502990Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4503342Z   NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4503860Z   NODE_AUTH_TOKEN: ***
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:30.4504069Z ##[endgroup]
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5301092Z npm notice
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5304208Z npm notice 📦  @minions-workflows/sdk@0.1.0
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5305143Z npm notice Tarball Contents
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5308241Z npm notice 1.1kB LICENSE
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5308653Z npm notice 421B README.md
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5309020Z npm notice 450B dist/index.d.ts
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5309408Z npm notice 222B dist/index.d.ts.map
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5309774Z npm notice 475B dist/index.js
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5310178Z npm notice 298B dist/index.js.map
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5310532Z npm notice 447B dist/schemas/index.d.ts
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5310965Z npm notice 366B dist/schemas/index.d.ts.map
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5311327Z npm notice 3.6kB dist/schemas/index.js
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5311757Z npm notice 3.3kB dist/schemas/index.js.map
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5312147Z npm notice 1.1kB package.json
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5312498Z npm notice Tarball Details
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5312861Z npm notice name: @minions-workflows/sdk
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5313182Z npm notice version: 0.1.0
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5313516Z npm notice filename: minions-workflows-sdk-0.1.0.tgz
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5313861Z npm notice package size: 3.3 kB
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5314218Z npm notice unpacked size: 11.7 kB
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5314605Z npm notice shasum: 23fae54562e5254d6455223749c0730ff09db446
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5315060Z npm notice integrity: sha512-678VKQBBYFHXo[...]5/ehUnwppTB9g==
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5315407Z npm notice total files: 11
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5315625Z npm notice
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:31:31.5336888Z npm notice Publishing to https://registry.npmjs.org/ with tag latest and public access
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:32:42.5666750Z npm error code E429
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:32:42.5670029Z npm error 429 Too Many Requests - PUT https://registry.npmjs.org/@minions-workflows%2fsdk - Could not publish, as user undefined: rate limited exceeded
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:32:42.5679118Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-02-23T17_31_31_166Z-debug-0.log
+publish-npm	Publish @minions-workflows/sdk	2026-02-23T17:32:42.5991700Z ##[error]Process completed with exit code 1.
+publish-npm	Post Install pnpm	﻿2026-02-23T17:32:42.6077225Z Post job cleanup.
+publish-npm	Post Install pnpm	2026-02-23T17:32:42.6612320Z Pruning is unnecessary.
+publish-npm	Post Run actions/checkout@v4	﻿2026-02-23T17:32:42.6711835Z Post job cleanup.
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7642932Z [command]/usr/bin/git version
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7680216Z git version 2.52.0
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7722855Z Temporarily overriding HOME='/home/runner/work/_temp/681a340f-659d-4576-aab3-08971c65eb68' before making global git config changes
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7724082Z Adding repository directory to the temporary git global config as a safe directory
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7728727Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/minions-workflows/minions-workflows
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7764720Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.7797291Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.8033177Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.8056549Z http.https://github.com/.extraheader
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.8073658Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.8109025Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.8352602Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish-npm	Post Run actions/checkout@v4	2026-02-23T17:32:42.8388978Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish-npm	Complete job	﻿2026-02-23T17:32:42.8743525Z Cleaning up orphan processes
+publish-python	Set up job	﻿2026-02-23T17:30:58.0932499Z Current runner version: '2.331.0'
+publish-python	Set up job	2026-02-23T17:30:58.0956784Z ##[group]Runner Image Provisioner
+publish-python	Set up job	2026-02-23T17:30:58.0957697Z Hosted Compute Agent
+publish-python	Set up job	2026-02-23T17:30:58.0958272Z Version: 20260123.484
+publish-python	Set up job	2026-02-23T17:30:58.0958858Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+publish-python	Set up job	2026-02-23T17:30:58.0959591Z Build Date: 2026-01-23T19:41:17Z
+publish-python	Set up job	2026-02-23T17:30:58.0960251Z Worker ID: {63b04c6e-27eb-4c43-b9a0-39c82776f68f}
+publish-python	Set up job	2026-02-23T17:30:58.0960932Z Azure Region: westus
+publish-python	Set up job	2026-02-23T17:30:58.0961520Z ##[endgroup]
+publish-python	Set up job	2026-02-23T17:30:58.0962903Z ##[group]Operating System
+publish-python	Set up job	2026-02-23T17:30:58.0963462Z Ubuntu
+publish-python	Set up job	2026-02-23T17:30:58.0964157Z 24.04.3
+publish-python	Set up job	2026-02-23T17:30:58.0964670Z LTS
+publish-python	Set up job	2026-02-23T17:30:58.0965095Z ##[endgroup]
+publish-python	Set up job	2026-02-23T17:30:58.0965649Z ##[group]Runner Image
+publish-python	Set up job	2026-02-23T17:30:58.0966150Z Image: ubuntu-24.04
+publish-python	Set up job	2026-02-23T17:30:58.0966660Z Version: 20260201.15.1
+publish-python	Set up job	2026-02-23T17:30:58.0967700Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+publish-python	Set up job	2026-02-23T17:30:58.0969381Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+publish-python	Set up job	2026-02-23T17:30:58.0970357Z ##[endgroup]
+publish-python	Set up job	2026-02-23T17:30:58.0971282Z ##[group]GITHUB_TOKEN Permissions
+publish-python	Set up job	2026-02-23T17:30:58.0973078Z Contents: read
+publish-python	Set up job	2026-02-23T17:30:58.0973704Z Metadata: read
+publish-python	Set up job	2026-02-23T17:30:58.0974509Z ##[endgroup]
+publish-python	Set up job	2026-02-23T17:30:58.0976666Z Secret source: Actions
+publish-python	Set up job	2026-02-23T17:30:58.0977444Z Prepare workflow directory
+publish-python	Set up job	2026-02-23T17:30:58.1293831Z Prepare all required actions
+publish-python	Set up job	2026-02-23T17:30:58.1335778Z Getting action download info
+publish-python	Set up job	2026-02-23T17:30:58.6629847Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+publish-python	Set up job	2026-02-23T17:30:58.7503760Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+publish-python	Set up job	2026-02-23T17:30:58.8306150Z Download action repository 'pypa/gh-action-pypi-publish@release/v1' (SHA:ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e)
+publish-python	Set up job	2026-02-23T17:30:59.4213841Z Getting action download info
+publish-python	Set up job	2026-02-23T17:30:59.5994997Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+publish-python	Set up job	2026-02-23T17:30:59.7045722Z Complete job name: publish-python
+publish-python	Run actions/checkout@v4	﻿2026-02-23T17:30:59.7740641Z ##[group]Run actions/checkout@v4
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7741534Z with:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7741988Z   repository: mxn2020/minions-workflows
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7742704Z   token: ***
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7743131Z   ssh-strict: true
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7743556Z   ssh-user: git
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7744227Z   persist-credentials: true
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7744731Z   clean: true
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7745168Z   sparse-checkout-cone-mode: true
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7745685Z   fetch-depth: 1
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7746101Z   fetch-tags: false
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7746551Z   show-progress: true
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7747006Z   lfs: false
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7747401Z   submodules: false
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7747838Z   set-safe-directory: true
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.7748570Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8817182Z Syncing repository: mxn2020/minions-workflows
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8819062Z ##[group]Getting Git version info
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8819915Z Working directory is '/home/runner/work/minions-workflows/minions-workflows'
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8821117Z [command]/usr/bin/git version
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8884401Z git version 2.52.0
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8910175Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8923495Z Temporarily overriding HOME='/home/runner/work/_temp/292c1f5f-bb16-4f63-b790-d4ee30c3d46d' before making global git config changes
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8925047Z Adding repository directory to the temporary git global config as a safe directory
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8935850Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/minions-workflows/minions-workflows
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8972284Z Deleting the contents of '/home/runner/work/minions-workflows/minions-workflows'
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8976031Z ##[group]Initializing the repository
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.8979898Z [command]/usr/bin/git init /home/runner/work/minions-workflows/minions-workflows
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9074778Z hint: Using 'master' as the name for the initial branch. This default branch name
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9075920Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9076896Z hint: to use in all of your new repositories, which will suppress this warning,
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9077819Z hint: call:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9078618Z hint:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9079686Z hint: 	git config --global init.defaultBranch <name>
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9080961Z hint:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9081841Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9083046Z hint: 'development'. The just-created branch can be renamed via this command:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9084237Z hint:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9084684Z hint: 	git branch -m <name>
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9085159Z hint:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9085774Z hint: Disable this message with "git config set advice.defaultBranchName false"
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9087065Z Initialized empty Git repository in /home/runner/work/minions-workflows/minions-workflows/.git/
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9089826Z [command]/usr/bin/git remote add origin https://github.com/mxn2020/minions-workflows
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9122643Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9123961Z ##[group]Disabling automatic garbage collection
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9127576Z [command]/usr/bin/git config --local gc.auto 0
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9156070Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9157406Z ##[group]Setting up auth
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9163416Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9194597Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9513956Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9543490Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9763126Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish-python	Run actions/checkout@v4	2026-02-23T17:30:59.9795048Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.0025719Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.0060268Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.0068713Z ##[group]Fetching the repository
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.0070122Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +393ed9fb67bc3c88f0fc3bcc5b9f76fa4a00a9f9:refs/tags/v0.1.2
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4586625Z From https://github.com/mxn2020/minions-workflows
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4588019Z  * [new ref]         393ed9fb67bc3c88f0fc3bcc5b9f76fa4a00a9f9 -> v0.1.2
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4612975Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4615168Z ##[group]Determining the checkout info
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4617187Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4621371Z [command]/usr/bin/git sparse-checkout disable
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4669496Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4697192Z ##[group]Checking out the ref
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4700467Z [command]/usr/bin/git checkout --progress --force refs/tags/v0.1.2
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4780533Z Note: switching to 'refs/tags/v0.1.2'.
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4781333Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4782013Z You are in 'detached HEAD' state. You can look around, make experimental
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4783716Z changes and commit them, and you can discard any commits you make in this
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4785613Z state without impacting any branches by switching back to a branch.
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4786597Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4787538Z If you want to create a new branch to retain commits you create, you may
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4789346Z do so (now or later) by using -c with the switch command. Example:
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4790252Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4790643Z   git switch -c <new-branch-name>
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4791300Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4791684Z Or undo this operation with:
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4792297Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4792650Z   git switch -
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4793140Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4794190Z Turn off this advice by setting config variable advice.detachedHead to false
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4795417Z 
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4796067Z HEAD is now at 393ed9f chore: bump minions-sdk to v0.2.3 and fix TS
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4799454Z ##[endgroup]
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4824755Z [command]/usr/bin/git log -1 --format=%H
+publish-python	Run actions/checkout@v4	2026-02-23T17:31:00.4846057Z 393ed9fb67bc3c88f0fc3bcc5b9f76fa4a00a9f9
+publish-python	Set up Python 3.12	﻿2026-02-23T17:31:00.5162954Z ##[group]Run actions/setup-python@v5
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5164314Z with:
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5165138Z   python-version: 3.12
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5166139Z   check-latest: false
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5167367Z   token: ***
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5168230Z   update-environment: true
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5169266Z   allow-prereleases: false
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5170272Z   freethreaded: false
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.5171163Z ##[endgroup]
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.6822359Z ##[group]Installed versions
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.6925538Z Successfully set up CPython (3.12.12)
+publish-python	Set up Python 3.12	2026-02-23T17:31:00.6928099Z ##[endgroup]
+publish-python	Install build tools	﻿2026-02-23T17:31:00.7096922Z ##[group]Run pip install hatch
+publish-python	Install build tools	2026-02-23T17:31:00.7098092Z [36;1mpip install hatch[0m
+publish-python	Install build tools	2026-02-23T17:31:00.7147959Z shell: /usr/bin/bash -e {0}
+publish-python	Install build tools	2026-02-23T17:31:00.7148966Z env:
+publish-python	Install build tools	2026-02-23T17:31:00.7149964Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Install build tools	2026-02-23T17:31:00.7151772Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Install build tools	2026-02-23T17:31:00.7153560Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Install build tools	2026-02-23T17:31:00.7155447Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Install build tools	2026-02-23T17:31:00.7157081Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Install build tools	2026-02-23T17:31:00.7158704Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Install build tools	2026-02-23T17:31:00.7160054Z ##[endgroup]
+publish-python	Install build tools	2026-02-23T17:31:01.4507179Z Collecting hatch
+publish-python	Install build tools	2026-02-23T17:31:01.5047885Z   Downloading hatch-1.16.3-py3-none-any.whl.metadata (5.6 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.5687154Z Collecting backports-zstd>=1.0.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.5717518Z   Downloading backports_zstd-1.3.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.9 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.5867592Z Collecting click>=8.0.6 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.5900364Z   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.6053254Z Collecting hatchling>=1.27.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.6080251Z   Downloading hatchling-1.28.0-py3-none-any.whl.metadata (3.8 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.6233768Z Collecting httpx>=0.22.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.6260138Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.6368928Z Collecting hyperlink>=21.0.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.6399748Z   Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.6644460Z Collecting keyring>=23.5.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.6671001Z   Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.6848528Z Collecting packaging>=24.2 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.6874667Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.6972937Z Collecting pexpect~=4.8 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.7000930Z   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.7181799Z Collecting platformdirs>=2.5.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.7208009Z   Downloading platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.7297525Z Collecting pyproject-hooks (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.7323502Z   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.7717614Z Collecting rich>=11.2.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.7746481Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.7871156Z Collecting shellingham>=1.4.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.7899740Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.7994196Z Collecting tomli-w>=1.0 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.8019549Z   Downloading tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.8160711Z Collecting tomlkit>=0.11.1 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.8189780Z   Downloading tomlkit-0.14.0-py3-none-any.whl.metadata (2.8 kB)
+publish-python	Install build tools	2026-02-23T17:31:01.8291334Z Collecting userpath~=1.7 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:01.8317352Z   Downloading userpath-1.9.2-py3-none-any.whl.metadata (3.0 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.0461085Z Collecting uv>=0.5.23 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.0490254Z   Downloading uv-0.10.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.0809766Z Collecting virtualenv>=20.26.6 (from hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.0837079Z   Downloading virtualenv-20.38.0-py3-none-any.whl.metadata (5.1 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.0966617Z Collecting ptyprocess>=0.5 (from pexpect~=4.8->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.1000331Z   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.1133049Z Collecting pathspec>=0.10.1 (from hatchling>=1.27.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.1161863Z   Downloading pathspec-1.0.4-py3-none-any.whl.metadata (13 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.1284137Z Collecting pluggy>=1.0.0 (from hatchling>=1.27.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.1310971Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.1568955Z Collecting trove-classifiers (from hatchling>=1.27.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.1596299Z   Downloading trove_classifiers-2026.1.14.14-py3-none-any.whl.metadata (2.4 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.1769150Z Collecting anyio (from httpx>=0.22.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.1796219Z   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.1976681Z Collecting certifi (from httpx>=0.22.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2002023Z   Downloading certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.2158757Z Collecting httpcore==1.* (from httpx>=0.22.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2191327Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.2332677Z Collecting idna (from httpx>=0.22.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2358365Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.2464450Z Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.22.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2490020Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.2630390Z Collecting SecretStorage>=3.2 (from keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2657287Z   Downloading secretstorage-3.5.0-py3-none-any.whl.metadata (4.0 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.2760274Z Collecting jeepney>=0.4.2 (from keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2786901Z   Downloading jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.2916868Z Collecting jaraco.classes (from keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.2944620Z   Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.3106803Z Collecting jaraco.functools (from keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.3134785Z   Downloading jaraco_functools-4.4.0-py3-none-any.whl.metadata (3.0 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.3256476Z Collecting jaraco.context (from keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.3282194Z   Downloading jaraco_context-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.3443483Z Collecting markdown-it-py>=2.2.0 (from rich>=11.2.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.3471306Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.3657800Z Collecting pygments<3.0.0,>=2.13.0 (from rich>=11.2.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.3683447Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.3786684Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=11.2.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.3816317Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.5495419Z Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.5524409Z   Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.6704876Z Collecting cffi>=2.0.0 (from cryptography>=2.0->SecretStorage>=3.2->keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.6736082Z   Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.6851022Z Collecting pycparser (from cffi>=2.0.0->cryptography>=2.0->SecretStorage>=3.2->keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.6889989Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7018940Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.26.6->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.7044324Z   Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7204341Z Collecting filelock<4,>=3.24.2 (from virtualenv>=20.26.6->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.7232798Z   Downloading filelock-3.24.3-py3-none-any.whl.metadata (2.0 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7426133Z Collecting typing_extensions>=4.5 (from anyio->httpx>=0.22.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.7451185Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7619311Z Collecting more-itertools (from jaraco.classes->keyring>=23.5.0->hatch)
+publish-python	Install build tools	2026-02-23T17:31:02.7648301Z   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7748875Z Downloading hatch-1.16.3-py3-none-any.whl (141 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7803316Z Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7850748Z Downloading userpath-1.9.2-py3-none-any.whl (9.1 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7898273Z Downloading backports_zstd-1.3.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (494 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.7980576Z Downloading click-8.3.1-py3-none-any.whl (108 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8029704Z Downloading hatchling-1.28.0-py3-none-any.whl (76 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8078611Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8131923Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8186446Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8235564Z Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8282408Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8336582Z Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8384300Z Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8430646Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8478631Z Downloading pathspec-1.0.4-py3-none-any.whl (55 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8523597Z Downloading platformdirs-4.9.2-py3-none-any.whl (21 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8570532Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8617281Z Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8662577Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8721413Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+publish-python	Install build tools	2026-02-23T17:31:02.8809632Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 162.4 MB/s  0:00:00
+publish-python	Install build tools	2026-02-23T17:31:02.8840443Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8888477Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8938861Z Downloading secretstorage-3.5.0-py3-none-any.whl (15 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.8989074Z Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+publish-python	Install build tools	2026-02-23T17:31:02.9203362Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 224.3 MB/s  0:00:00
+publish-python	Install build tools	2026-02-23T17:31:02.9230111Z Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.9281996Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.9328312Z Downloading tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.9372475Z Downloading tomlkit-0.14.0-py3-none-any.whl (39 kB)
+publish-python	Install build tools	2026-02-23T17:31:02.9431277Z Downloading uv-0.10.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23.1 MB)
+publish-python	Install build tools	2026-02-23T17:31:03.0306810Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.1/23.1 MB 269.5 MB/s  0:00:00
+publish-python	Install build tools	2026-02-23T17:31:03.0340580Z Downloading virtualenv-20.38.0-py3-none-any.whl (5.8 MB)
+publish-python	Install build tools	2026-02-23T17:31:03.0626511Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 219.6 MB/s  0:00:00
+publish-python	Install build tools	2026-02-23T17:31:03.0658699Z Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.0727718Z Downloading filelock-3.24.3-py3-none-any.whl (24 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.0780792Z Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.0830325Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.0879297Z Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.0928944Z Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.0976712Z Downloading jaraco_context-6.1.0-py3-none-any.whl (7.1 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.1025982Z Downloading jaraco_functools-4.4.0-py3-none-any.whl (10 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.1073153Z Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.1123367Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.1172663Z Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.1217089Z Downloading trove_classifiers-2026.1.14.14-py3-none-any.whl (14 kB)
+publish-python	Install build tools	2026-02-23T17:31:03.2389437Z Installing collected packages: trove-classifiers, ptyprocess, distlib, uv, typing_extensions, tomlkit, tomli-w, shellingham, pyproject-hooks, pygments, pycparser, pluggy, platformdirs, pexpect, pathspec, packaging, more-itertools, mdurl, jeepney, jaraco.context, idna, h11, filelock, click, certifi, backports-zstd, virtualenv, userpath, markdown-it-py, jaraco.functools, jaraco.classes, hyperlink, httpcore, hatchling, cffi, anyio, rich, httpx, cryptography, SecretStorage, keyring, hatch
+publish-python	Install build tools	2026-02-23T17:31:06.0935059Z 
+publish-python	Install build tools	2026-02-23T17:31:06.0974153Z Successfully installed SecretStorage-3.5.0 anyio-4.12.1 backports-zstd-1.3.0 certifi-2026.1.4 cffi-2.0.0 click-8.3.1 cryptography-46.0.5 distlib-0.4.0 filelock-3.24.3 h11-0.16.0 hatch-1.16.3 hatchling-1.28.0 httpcore-1.0.9 httpx-0.28.1 hyperlink-21.0.0 idna-3.11 jaraco.classes-3.4.0 jaraco.context-6.1.0 jaraco.functools-4.4.0 jeepney-0.9.0 keyring-25.7.0 markdown-it-py-4.0.0 mdurl-0.1.2 more-itertools-10.8.0 packaging-26.0 pathspec-1.0.4 pexpect-4.9.0 platformdirs-4.9.2 pluggy-1.6.0 ptyprocess-0.7.0 pycparser-3.0 pygments-2.19.2 pyproject-hooks-1.2.0 rich-14.3.3 shellingham-1.5.4 tomli-w-1.2.0 tomlkit-0.14.0 trove-classifiers-2026.1.14.14 typing_extensions-4.15.0 userpath-1.9.2 uv-0.10.4 virtualenv-20.38.0
+publish-python	Install build tools	2026-02-23T17:31:06.1956952Z 
+publish-python	Install build tools	2026-02-23T17:31:06.1957491Z [notice] A new release of pip is available: 26.0 -> 26.0.1
+publish-python	Install build tools	2026-02-23T17:31:06.1958176Z [notice] To update, run: pip install --upgrade pip
+publish-python	Run tests	﻿2026-02-23T17:31:06.3147600Z ##[group]Run pip install -e ".[test]"
+publish-python	Run tests	2026-02-23T17:31:06.3147943Z [36;1mpip install -e ".[test]"[0m
+publish-python	Run tests	2026-02-23T17:31:06.3148187Z [36;1mpytest -v[0m
+publish-python	Run tests	2026-02-23T17:31:06.3180335Z shell: /usr/bin/bash -e {0}
+publish-python	Run tests	2026-02-23T17:31:06.3180563Z env:
+publish-python	Run tests	2026-02-23T17:31:06.3180812Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Run tests	2026-02-23T17:31:06.3181248Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Run tests	2026-02-23T17:31:06.3181676Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Run tests	2026-02-23T17:31:06.3182041Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Run tests	2026-02-23T17:31:06.3182404Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Run tests	2026-02-23T17:31:06.3182765Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Run tests	2026-02-23T17:31:06.3183069Z ##[endgroup]
+publish-python	Run tests	2026-02-23T17:31:06.6610507Z Obtaining file:///home/runner/work/minions-workflows/minions-workflows/packages/python
+publish-python	Run tests	2026-02-23T17:31:06.6626451Z   Installing build dependencies: started
+publish-python	Run tests	2026-02-23T17:31:07.2677592Z   Installing build dependencies: finished with status 'done'
+publish-python	Run tests	2026-02-23T17:31:07.2682668Z   Checking if build backend supports build_editable: started
+publish-python	Run tests	2026-02-23T17:31:07.3185249Z   Checking if build backend supports build_editable: finished with status 'done'
+publish-python	Run tests	2026-02-23T17:31:07.3193947Z   Getting requirements to build editable: started
+publish-python	Run tests	2026-02-23T17:31:07.4702122Z   Getting requirements to build editable: finished with status 'done'
+publish-python	Run tests	2026-02-23T17:31:07.4714977Z   Installing backend dependencies: started
+publish-python	Run tests	2026-02-23T17:31:08.0001390Z   Installing backend dependencies: finished with status 'done'
+publish-python	Run tests	2026-02-23T17:31:08.0008640Z   Preparing editable metadata (pyproject.toml): started
+publish-python	Run tests	2026-02-23T17:31:08.1732769Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+publish-python	Run tests	2026-02-23T17:31:08.2411698Z Collecting minions-sdk>=0.2.1 (from minions-workflows==0.1.0)
+publish-python	Run tests	2026-02-23T17:31:08.2942021Z   Downloading minions_sdk-0.2.2-py3-none-any.whl.metadata (2.1 kB)
+publish-python	Run tests	2026-02-23T17:31:08.3349915Z Collecting pytest>=7.0 (from minions-workflows==0.1.0)
+publish-python	Run tests	2026-02-23T17:31:08.3380241Z   Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+publish-python	Run tests	2026-02-23T17:31:08.3490254Z Collecting iniconfig>=1.0.1 (from pytest>=7.0->minions-workflows==0.1.0)
+publish-python	Run tests	2026-02-23T17:31:08.3520386Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+publish-python	Run tests	2026-02-23T17:31:08.3557499Z Requirement already satisfied: packaging>=22 in /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages (from pytest>=7.0->minions-workflows==0.1.0) (26.0)
+publish-python	Run tests	2026-02-23T17:31:08.3562477Z Requirement already satisfied: pluggy<2,>=1.5 in /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages (from pytest>=7.0->minions-workflows==0.1.0) (1.6.0)
+publish-python	Run tests	2026-02-23T17:31:08.3573017Z Requirement already satisfied: pygments>=2.7.2 in /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages (from pytest>=7.0->minions-workflows==0.1.0) (2.19.2)
+publish-python	Run tests	2026-02-23T17:31:08.3631483Z Downloading minions_sdk-0.2.2-py3-none-any.whl (17 kB)
+publish-python	Run tests	2026-02-23T17:31:08.3682978Z Downloading pytest-9.0.2-py3-none-any.whl (374 kB)
+publish-python	Run tests	2026-02-23T17:31:08.3944822Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+publish-python	Run tests	2026-02-23T17:31:08.4020443Z Building wheels for collected packages: minions-workflows
+publish-python	Run tests	2026-02-23T17:31:08.4027901Z   Building editable for minions-workflows (pyproject.toml): started
+publish-python	Run tests	2026-02-23T17:31:08.4382682Z   Building editable for minions-workflows (pyproject.toml): finished with status 'done'
+publish-python	Run tests	2026-02-23T17:31:08.4387800Z   Created wheel for minions-workflows: filename=minions_workflows-0.1.0-py3-none-any.whl size=1381 sha256=f19985c2f0d21541957dec74ad8d2e9a6c152faf9659086c4d89a6238c654c1e
+publish-python	Run tests	2026-02-23T17:31:08.4389195Z   Stored in directory: /tmp/pip-ephem-wheel-cache-h91wrmxw/wheels/55/99/04/dcc20dd71893944fc7444c90f8f0d5e6c03042f5912888b98e
+publish-python	Run tests	2026-02-23T17:31:08.4401320Z Successfully built minions-workflows
+publish-python	Run tests	2026-02-23T17:31:08.4765123Z Installing collected packages: minions-sdk, iniconfig, pytest, minions-workflows
+publish-python	Run tests	2026-02-23T17:31:08.7522079Z 
+publish-python	Run tests	2026-02-23T17:31:08.7558861Z Successfully installed iniconfig-2.3.0 minions-sdk-0.2.2 minions-workflows-0.1.0 pytest-9.0.2
+publish-python	Run tests	2026-02-23T17:31:08.7610704Z 
+publish-python	Run tests	2026-02-23T17:31:08.7610944Z [notice] A new release of pip is available: 26.0 -> 26.0.1
+publish-python	Run tests	2026-02-23T17:31:08.7611504Z [notice] To update, run: pip install --upgrade pip
+publish-python	Run tests	2026-02-23T17:31:09.3677335Z ============================= test session starts ==============================
+publish-python	Run tests	2026-02-23T17:31:09.3678556Z platform linux -- Python 3.12.12, pytest-9.0.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.12.12/x64/bin/python
+publish-python	Run tests	2026-02-23T17:31:09.3679203Z cachedir: .pytest_cache
+publish-python	Run tests	2026-02-23T17:31:09.3679657Z rootdir: /home/runner/work/minions-workflows/minions-workflows/packages/python
+publish-python	Run tests	2026-02-23T17:31:09.3680159Z configfile: pyproject.toml
+publish-python	Run tests	2026-02-23T17:31:09.3680430Z testpaths: tests
+publish-python	Run tests	2026-02-23T17:31:09.3680665Z plugins: anyio-4.12.1
+publish-python	Run tests	2026-02-23T17:31:09.3840548Z collecting ... collected 3 items
+publish-python	Run tests	2026-02-23T17:31:09.3840836Z 
+publish-python	Run tests	2026-02-23T17:31:09.3850016Z tests/test_basic.py::test_version PASSED                                 [ 33%]
+publish-python	Run tests	2026-02-23T17:31:09.3857580Z tests/test_basic.py::test_create_client PASSED                           [ 66%]
+publish-python	Run tests	2026-02-23T17:31:09.4104263Z tests/test_basic.py::test_create_client_with_options PASSED              [100%]
+publish-python	Run tests	2026-02-23T17:31:09.4105032Z 
+publish-python	Run tests	2026-02-23T17:31:09.4105255Z ============================== 3 passed in 0.02s ===============================
+publish-python	Build package	﻿2026-02-23T17:31:09.4399167Z ##[group]Run hatch build
+publish-python	Build package	2026-02-23T17:31:09.4399433Z [36;1mhatch build[0m
+publish-python	Build package	2026-02-23T17:31:09.4430625Z shell: /usr/bin/bash -e {0}
+publish-python	Build package	2026-02-23T17:31:09.4430845Z env:
+publish-python	Build package	2026-02-23T17:31:09.4431085Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Build package	2026-02-23T17:31:09.4431502Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Build package	2026-02-23T17:31:09.4431906Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Build package	2026-02-23T17:31:09.4432274Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Build package	2026-02-23T17:31:09.4432621Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Build package	2026-02-23T17:31:09.4432980Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Build package	2026-02-23T17:31:09.4433275Z ##[endgroup]
+publish-python	Build package	2026-02-23T17:31:09.6739155Z Creating environment: hatch-build
+publish-python	Build package	2026-02-23T17:31:09.7635746Z Checking dependencies
+publish-python	Build package	2026-02-23T17:31:09.7898859Z Syncing dependencies
+publish-python	Build package	2026-02-23T17:31:09.8892218Z Inspecting build dependencies
+publish-python	Build package	2026-02-23T17:31:09.8928704Z ──────────────────────────────────── sdist ─────────────────────────────────────
+publish-python	Build package	2026-02-23T17:31:10.1090599Z dist/minions_workflows-0.1.0.tar.gz
+publish-python	Build package	2026-02-23T17:31:10.1249846Z ──────────────────────────────────── wheel ─────────────────────────────────────
+publish-python	Build package	2026-02-23T17:31:10.2419067Z dist/minions_workflows-0.1.0-py3-none-any.whl
+publish-python	Publish to PyPI	﻿2026-02-23T17:31:10.3034958Z ##[group]Run pypa/gh-action-pypi-publish@release/v1
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3035292Z with:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3035518Z   packages-dir: packages/python/dist/
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3036661Z   password: ***
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3036852Z   user: __token__
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3037089Z   repository_url: https://upload.pypi.org/legacy/
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3037371Z   packages_dir: dist
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3037567Z   verify_metadata: true
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3037765Z   skip_existing: false
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3037947Z   verbose: false
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3038121Z   print_hash: false
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3038297Z   attestations: true
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3038475Z env:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3038698Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3039097Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3039491Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3039841Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3040220Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3040581Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3040873Z ##[endgroup]
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3113331Z ##[group]Run # Reset path if needed
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3113612Z [36;1m# Reset path if needed[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3114123Z [36;1m# https://github.com/pypa/gh-action-pypi-publish/issues/112[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3114519Z [36;1mif [[ $PATH != *"/usr/bin"* ]]; then[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3114871Z [36;1m  echo "\$PATH=$PATH. Resetting \$PATH for GitHub Actions."[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3115301Z [36;1m  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3115680Z [36;1m  echo "PATH=$PATH" >>"$GITHUB_ENV"[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3115951Z [36;1m  echo "$PATH" >>"$GITHUB_PATH"[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3116210Z [36;1m  echo "\$PATH reset. \$PATH=$PATH"[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3116452Z [36;1mfi[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3148599Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3148921Z env:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3149333Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3149747Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3150147Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3150494Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3150856Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3151212Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3151508Z ##[endgroup]
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3225729Z ##[group]Run # 🔎 Discover pre-installed Python
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3226057Z [36;1m# 🔎 Discover pre-installed Python[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3226471Z [36;1mecho "python-path=$(command -v python3 || :)" | tee -a "${GITHUB_OUTPUT}"[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3254753Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3255084Z env:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3255331Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3255748Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3256149Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3256507Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3256861Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3257226Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3257521Z ##[endgroup]
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3315605Z python-path=/opt/hostedtoolcache/Python/3.12.12/x64/bin/python3
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3396961Z ##[group]Run # Create Docker container action
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3397273Z [36;1m# Create Docker container action[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3397944Z [36;1m/opt/hostedtoolcache/Python/3.12.12/x64/bin/python3 '/home/runner/work/_actions/pypa/gh-action-pypi-publish/release/v1/create-docker-action.py'[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3426681Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3427017Z env:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3427263Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3427687Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3428090Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3428443Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3428805Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3429168Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3429461Z   REF: release/v1
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3429727Z   REPO: pypa/gh-action-pypi-publish
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3429990Z   REPO_ID: 1164629747
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3430173Z ##[endgroup]
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3843946Z ##[group]Run ./.github/.tmp/.generated-actions/run-pypi-publish-in-docker-container
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3844680Z with:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3844846Z   user: __token__
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3845856Z   password: ***
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3846109Z   repository-url: https://upload.pypi.org/legacy/
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3846419Z   packages-dir: packages/python/dist/
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3846672Z   verify-metadata: true
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3846882Z   skip-existing: false
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3847069Z   verbose: false
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3847251Z   print-hash: false
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3847431Z   attestations: true
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3847612Z env:
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3847848Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3848262Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3848672Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3849036Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3849381Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3849749Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3850234Z ##[endgroup]
+publish-python	Publish to PyPI	2026-02-23T17:31:10.3977649Z ##[command]/usr/bin/docker run --name ghcriopypaghactionpypipublishreleasev1_d72620 --label 7d22c4 --workdir /github/workspace --rm -e "pythonLocation" -e "PKG_CONFIG_PATH" -e "Python_ROOT_DIR" -e "Python2_ROOT_DIR" -e "Python3_ROOT_DIR" -e "LD_LIBRARY_PATH" -e "INPUT_USER" -e "INPUT_PASSWORD" -e "INPUT_REPOSITORY-URL" -e "INPUT_PACKAGES-DIR" -e "INPUT_VERIFY-METADATA" -e "INPUT_SKIP-EXISTING" -e "INPUT_VERBOSE" -e "INPUT_PRINT-HASH" -e "INPUT_ATTESTATIONS" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ACTION_PATH" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/minions-workflows/minions-workflows":"/github/workspace" ghcr.io/pypa/gh-action-pypi-publish:release-v1
+publish-python	Publish to PyPI	2026-02-23T17:31:10.4672748Z Unable to find image 'ghcr.io/pypa/gh-action-pypi-publish:release-v1' locally
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1764978Z release-v1: Pulling from pypa/gh-action-pypi-publish
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1768927Z 6e0d6626b028: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1769707Z 7b1ad37e982c: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1770169Z 31b0d2470ce1: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1770580Z 8c141999d083: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1770991Z 6ad5a334a1c3: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1771391Z 1d9261df0a43: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1771794Z 8d984121c369: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1772194Z 96c84f895532: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1772587Z 912833a16df9: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1772984Z 15b5df32596c: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1773376Z d4289cea1034: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1773777Z 8380019ec1fc: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1774411Z f5d447a84c58: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1774856Z 4f4fb700ef54: Pulling fs layer
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1775233Z 6ad5a334a1c3: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1775552Z 1d9261df0a43: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1775876Z 8d984121c369: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1776185Z 96c84f895532: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1776490Z 8c141999d083: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1776850Z 912833a16df9: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1777180Z 15b5df32596c: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1777520Z d4289cea1034: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1777867Z 8380019ec1fc: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1778200Z f5d447a84c58: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.1778563Z 4f4fb700ef54: Waiting
+publish-python	Publish to PyPI	2026-02-23T17:31:11.3661427Z 7b1ad37e982c: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.3894845Z 31b0d2470ce1: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:11.3897565Z 31b0d2470ce1: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.4484878Z 6e0d6626b028: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:11.4485364Z 6e0d6626b028: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.6045810Z 8c141999d083: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.6468459Z 6ad5a334a1c3: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.6830366Z 1d9261df0a43: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:11.6831233Z 1d9261df0a43: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.7874287Z 8d984121c369: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:11.7874850Z 8d984121c369: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.8521696Z 96c84f895532: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:11.8522220Z 96c84f895532: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:11.8585422Z 912833a16df9: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:11.8587528Z 912833a16df9: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.0226914Z 15b5df32596c: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:12.0227472Z 15b5df32596c: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.0331556Z 8380019ec1fc: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:12.0333087Z 8380019ec1fc: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.0489753Z d4289cea1034: Verifying Checksum
+publish-python	Publish to PyPI	2026-02-23T17:31:12.0490230Z d4289cea1034: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.2155050Z 4f4fb700ef54: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.3148465Z f5d447a84c58: Download complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.3708461Z 6e0d6626b028: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:12.8124297Z 7b1ad37e982c: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:13.3728553Z 31b0d2470ce1: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:13.3820408Z 8c141999d083: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:13.3939330Z 6ad5a334a1c3: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.5615350Z 1d9261df0a43: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.5701916Z 8d984121c369: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.5813241Z 96c84f895532: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.5898932Z 912833a16df9: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.5985486Z 15b5df32596c: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.6073555Z d4289cea1034: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.6149059Z 8380019ec1fc: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.6222660Z f5d447a84c58: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.6293781Z 4f4fb700ef54: Pull complete
+publish-python	Publish to PyPI	2026-02-23T17:31:14.6332439Z Digest: sha256:10b09cfb1f96809cac141fcd2b0800184ce6bb17aee65e4ff4ab77db03d6203d
+publish-python	Publish to PyPI	2026-02-23T17:31:14.6344514Z Status: Downloaded newer image for ghcr.io/pypa/gh-action-pypi-publish:release-v1
+publish-python	Publish to PyPI	2026-02-23T17:31:15.1184546Z ##[warning]The workflow was run with the 'attestations: true' input, but an explicit password was also set, disabling Trusted Publishing. As a result, the attestations input is ignored.
+publish-python	Publish to PyPI	2026-02-23T17:31:15.1187996Z ##[warning]Trusted Publishers allows publishing packages to PyPI from automated environments like GitHub Actions without needing to use username/password combinations or API tokens to authenticate with PyPI. Read more: https://docs.pypi.org/trusted-publishers
+publish-python	Publish to PyPI	2026-02-23T17:31:15.1190277Z ##[warning]A new Trusted Publisher for the currently running publishing workflow can be created by accessing the following link(s) while logged-in as an owner of the package(s):
+publish-python	Publish to PyPI	2026-02-23T17:31:15.1191500Z - https://pypi.org/manage/project/minions-workflows/settings/publishing/?provider=github&owner=mxn2020&repository=minions-workflows&workflow_filename=publish.yml
+publish-python	Publish to PyPI	2026-02-23T17:31:15.1192132Z 
+publish-python	Publish to PyPI	2026-02-23T17:31:15.7853380Z Checking packages/python/dist/minions_workflows-0.1.0-py3-none-any.whl: [32mPASSED[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:15.7905573Z Checking packages/python/dist/minions_workflows-0.1.0.tar.gz: [32mPASSED[0m
+publish-python	Publish to PyPI	2026-02-23T17:31:16.4628754Z Uploading distributions to https://upload.pypi.org/legacy/
+publish-python	Publish to PyPI	2026-02-23T17:31:16.4714931Z Uploading minions_workflows-0.1.0-py3-none-any.whl
+publish-python	Publish to PyPI	2026-02-23T17:31:16.8412193Z [33mWARNING [0m Error during upload. Retry with the --verbose option for more details. 
+publish-python	Publish to PyPI	2026-02-23T17:31:16.8419748Z [31mERROR   [0m HTTPError: 429 Too Many Requests from https://upload.pypi.org/legacy/  
+publish-python	Publish to PyPI	2026-02-23T17:31:16.8420693Z          Too many new projects created                                          
+publish-python	Post Publish to PyPI	﻿2026-02-23T17:31:16.9558185Z Post job cleanup.
+publish-python	Post Run actions/checkout@v4	﻿2026-02-23T17:31:16.9613085Z Post job cleanup.
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0534939Z [command]/usr/bin/git version
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0570545Z git version 2.52.0
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0614824Z Temporarily overriding HOME='/home/runner/work/_temp/7673c731-bf04-4af1-9e2e-89354d2450f5' before making global git config changes
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0616266Z Adding repository directory to the temporary git global config as a safe directory
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0628343Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/minions-workflows/minions-workflows
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0665387Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0699241Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0926277Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0946397Z http.https://github.com/.extraheader
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0958491Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.0988624Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.1204812Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish-python	Post Run actions/checkout@v4	2026-02-23T17:31:17.1234620Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish-python	Complete job	﻿2026-02-23T17:31:17.1563130Z Cleaning up orphan processes
