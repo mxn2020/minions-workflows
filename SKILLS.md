@@ -1,126 +1,256 @@
 ---
 name: minions-workflows
-description: Agent skills for working with Minions Workflows MinionTypes. Provides CRUD operations, CLI usage, and best practices for AI agents managing minions-workflows data.
+description: Workflow definitions, step sequences, transitions, and run history
 ---
 
-# Minions Workflows Agent Skills
+# minions-workflows — Agent Skills
 
-Skills for agents operating on the `minions-workflows` toolbox.
+## What is a Workflow in the Minions Context?
 
-## Prerequisites
+Before defining types, it's worth being precise. A "workflow" can mean several different things:
 
-Install the SDK and CLI:
+```
+a reusable multi-step process             → WorkflowDefinition
+a single step in that process             → WorkflowStep
+a running instance of a workflow          → WorkflowRun
+a transition between steps               → WorkflowTransition
+what triggered it                         → schedule, event, or manual
+```
+
+---
+
+## MinionTypes
+
+**Core**
+```ts
+// workflow-definition
+{
+  type: "workflow-definition",
+  fields: {
+    name: string,
+    description: string,
+    clawspaceId: string,             // which clawspace this workflow belongs to
+    version: string,                 // semver, e.g. "1.0.0"
+    triggerType: "schedule" | "event" | "manual",
+    triggerConfig: string,           // cron expression, event name, or empty
+    status: "active" | "paused" | "archived",
+    createdAt: datetime,
+    updatedAt: datetime
+  }
+}
+
+// workflow-step
+{
+  type: "workflow-step",
+  fields: {
+    workflowId: string,
+    name: string,
+    stepIndex: number,               // sequential order within the workflow
+    agentId: string,                 // which agent executes this step
+    skillRef: string,                // skill identifier within that agent
+    inputMapping: string,            // JSON mapping of inputs from previous step
+    outputMapping: string,           // JSON mapping of outputs to next step
+    onSuccess: string,               // next step name or "complete"
+    onFailure: string,               // step name, "retry", "abort", or "human-review"
+    timeoutMs: number                // max execution time before failure
+  }
+}
+```
+
+**Execution**
+```ts
+// workflow-run
+{
+  type: "workflow-run",
+  fields: {
+    workflowId: string,
+    status: "pending" | "running" | "paused" | "completed" | "failed" | "aborted",
+    currentStepIndex: number,
+    startedAt: datetime,
+    completedAt: datetime,
+    triggeredBy: string,             // scheduleId, eventName, or userId
+    inputs: Record<string, any>,     // initial run inputs
+    outputs: Record<string, any>,    // accumulated outputs
+    errorMessage: string
+  }
+}
+
+// workflow-transition
+{
+  type: "workflow-transition",
+  fields: {
+    runId: string,
+    fromStep: string,
+    toStep: string,
+    triggeredAt: datetime,
+    reason: string,                  // "success", "failure", "timeout", "human-override"
+    durationMs: number               // time spent on the from-step
+  }
+}
+```
+
+---
+
+## Relations
+
+```
+workflow-definition  --contains-->       workflow-step
+workflow-definition  --instantiated-->   workflow-run
+workflow-run         --logged-->         workflow-transition
+workflow-step        --executes_via-->   agent-definition (minions-agents)
+workflow-step        --uses_skill-->     skill-definition (minions-skills)
+workflow-run         --triggered_by-->   schedule (minions-scheduler)
+```
+
+---
+
+## How It Connects to Other Toolboxes
+
+`minions-workflows` provides the execution engine for all multi-step processes:
+
+```
+minions-orchestration  → workflow-definitions are scoped per clawspaceId
+minions-agents         → each workflow-step maps to an agent + skill
+minions-skills         → skillRef in workflow-step points to a skill-definition
+minions-scheduler      → schedule triggers workflow-runs automatically
+minions-tasks          → each workflow-run may spawn tasks for tracking
+minions-approvals      → workflow-steps with onFailure: "human-review" create approval-requests
+minions-costs          → each workflow-run accumulates cost across all step executions
+```
+
+The key insight: **workflows are data, not code**. An OrchestratorAgent reads a workflow-definition and executes steps sequentially, routing outputs from one agent to the inputs of the next. Changing a workflow means editing a Minion, not rewriting agent logic.
+
+---
+
+## Agent SKILLS for `minions-workflows`
+
+```markdown
+# WorkflowAgent Skills
+
+## Context
+You own the execution of all workflows across all clawspaces.
+You load workflow-definitions, execute steps in sequence,
+handle success/failure branching, and log every transition.
+You do not perform domain work — you coordinate agents.
+
+## Skill: Start Workflow Run
+1. On trigger (schedule, event, or manual):
+   - Load the workflow-definition by id
+   - Create a `workflow-run` Minion with status "running"
+   - Set currentStepIndex to 0
+   - Begin executing the first step
+
+## Skill: Execute Step
+1. Load the workflow-step at currentStepIndex
+2. Prepare inputs using inputMapping from accumulated run outputs
+3. Invoke the target agent's skill via agent-message
+4. Wait for completion (up to timeoutMs)
+5. On success:
+   - Apply outputMapping to merge results into run outputs
+   - Create workflow-transition with reason "success"
+   - Advance to onSuccess step
+6. On failure:
+   - Create workflow-transition with reason "failure"
+   - Follow onFailure directive:
+     - "retry": re-execute the same step (max 3 retries)
+     - "abort": set run status to "failed", log error
+     - "human-review": create approval-request, pause run
+     - step-name: branch to that step
+7. On timeout:
+   - Create workflow-transition with reason "timeout"
+   - Follow onFailure directive
+
+## Skill: Resume Paused Run
+1. On approval-request decision:
+   - If approved: resume from current step with any modified inputs
+   - If rejected: abort the run, log reason
+
+## Skill: Complete Run
+1. When the final step's onSuccess is "complete":
+   - Set run status to "completed", set completedAt
+   - Log final workflow-transition
+   - Emit "workflow-complete" to OrchestratorAgent
+   - Record cost summary via minions-costs
+
+## Hard Rules
+- Never skip a step — always execute in order unless branching via onFailure
+- Every step transition must produce a workflow-transition Minion
+- Max 3 retries per step before escalating to onFailure
+- Timed-out steps always follow the failure path
+- Workflow-run Minions are immutable after completion — never edit a finished run
+```
+
+
+---
+
+## CLI Reference
+
+Install globally:
 
 ```bash
-# TypeScript
-pnpm add @minions-workflows/sdk
-
-# Python
-pip install minions-workflows
-
-# CLI
 pnpm add -g @minions-workflows/cli
 ```
 
----
+Set `MINIONS_STORE` env var to control where data is stored (default: `.minions/`).
+Storage uses sharded directories: `.minions/<id[0..1]>/<id[2..3]>/<id>.json`
 
-## Using the CLI
-
-The `workflows` CLI provides basic project info and utilities:
+### Discover Types
 
 ```bash
-# Show project info (SDK name, CLI name, Python package)
-workflows info
+# List all MinionTypes with their fields
+workflows types list
+
+# Show detailed schema for a specific type
+workflows types show <type-slug>
 ```
 
-Use the CLI as the primary interface for scripted operations. For programmatic access within agent code, use the SDK directly.
+### Create
 
----
+```bash
+# Create with shortcut flags
+workflows create <type> -t "Title" -s "status" -p "priority"
 
-## Using the SDK
-
-### TypeScript
-
-```ts
-import { customTypes } from '@minions-workflows/sdk/schemas';
-
-// List all available MinionTypes in this toolbox
-for (const type of customTypes) {
-  console.log(`${type.icon} ${type.name} (${type.slug})`);
-  console.log(`  ${type.description}`);
-  console.log(`  Fields: ${type.schema.map(f => f.name).join(', ')}`);
-}
-
-// Access a specific type
-const myType = customTypes.find(t => t.slug === 'YOUR_TYPE_SLUG');
+# Create with full field data
+workflows create <type> --data '{ ... }'
 ```
 
-### Python
+### Read
 
-```python
-from minions_workflows.schemas import custom_types
+```bash
+# List all Minions of a type
+workflows list <type>
 
-# List all available MinionTypes
-for t in custom_types:
-    print(f"{t.icon} {t.name} ({t.slug})")
-    print(f"  {t.description}")
+# Show a specific Minion
+workflows show <id>
+
+# Search by text
+workflows search "query"
+
+# Output as JSON (for piping)
+workflows list --json
+workflows show <id> --json
 ```
 
----
+### Update
 
-## Skill: Create Minion
+```bash
+# Update fields
+workflows update <id> --data '{ "status": "active" }'
+```
 
-When creating a new Minion of any type in this toolbox:
+### Delete
 
-1. Look up the MinionType from `customTypes` by slug
-2. Validate all required fields are present according to the schema
-3. Set `string` fields to their values, `number` fields to numeric values
-4. Set `select` fields to one of their valid options
-5. Set `boolean` fields to `true` or `false`
-6. Always include a timestamp for any `createdAt` or similar fields (ISO 8601 format)
+```bash
+# Soft-delete (marks as deleted, preserves data)
+workflows delete <id>
+```
 
----
+### Stats & Validation
 
-## Skill: Read / Query Minions
+```bash
+# Show storage stats
+workflows stats
 
-When reading or searching for Minions:
-
-1. Query by MinionType slug to filter by type
-2. Use field values for secondary filtering
-3. For references (fields ending in `Id`), resolve the linked Minion for full context
-4. Return results in a structured format the calling agent can parse
-
----
-
-## Skill: Update Minion
-
-When updating an existing Minion:
-
-1. Load the current Minion by ID
-2. Validate the update against the MinionType schema
-3. Only modify the fields that need changing — preserve existing values
-4. If the type has a `status` field, follow valid status transitions
-5. If the type has an `updatedAt` field, set it to the current timestamp
-6. Log significant field changes for audit if the context requires it
-
----
-
-## Skill: Delete / Archive Minion
-
-When removing a Minion:
-
-1. Prefer soft-delete: set `status` to `"cancelled"` or `"archived"` if available
-2. Never hard-delete Minions that other Minions reference via ID fields
-3. Check for dependent Minions before any destructive operation
-4. If hard-delete is required, ensure all references are cleaned up first
-
----
-
-## Hard Rules
-
-- Every Minion MUST conform to its MinionType schema
-- All `select` fields must use valid option values
-- All ID reference fields must point to existing Minions
-- Timestamps must be in ISO 8601 format
-- Never create orphaned Minions — always set reference fields when applicable
-- This agent only writes to `minions-workflows` — it reads from other toolboxes but never writes to them
+# Validate a Minion JSON file against its schema
+workflows validate ./my-minion.json
+```
