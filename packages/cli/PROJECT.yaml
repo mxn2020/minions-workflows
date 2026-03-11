@@ -6,3 +6,4 @@ description: "CLI for minions-workflows — Workflow definitions, step sequences
 priority: high
 deploy_url: null
 tags: null
+category: minion-toolbox

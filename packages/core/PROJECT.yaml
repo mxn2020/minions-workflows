@@ -6,3 +6,4 @@ description: "Workflow definitions, step sequences, transitions, and run history
 priority: high
 deploy_url: null
 tags: null
+category: minion-toolbox
