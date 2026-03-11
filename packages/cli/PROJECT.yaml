@@ -1,0 +1,8 @@
+name: "@minions-workflows/cli"
+project_scope: child
+child_type: cli
+parent_project: minions-workflows-workspace
+description: "CLI for minions-workflows — Workflow definitions, step sequences, transitions, and run history"
+priority: high
+deploy_url: null
+tags: null

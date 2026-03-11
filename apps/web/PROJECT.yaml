@@ -1,0 +1,8 @@
+name: "@minions-workflows/web"
+project_scope: child
+child_type: web-app
+parent_project: minions-workflows-workspace
+description: "Standard compliance definition for @minions-workflows/web"
+priority: high
+deploy_url: null
+tags: null

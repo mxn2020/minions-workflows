@@ -1,0 +1,15 @@
+name: minions-workflows-workspace
+project_scope: main
+project_type: monorepo
+description: "Workflow definitions, step sequences, transitions, and run history"
+tier: idea
+lane: minions
+priority: medium
+oss: true
+stack: [typescript]
+repo: "https://github.com/mxn2020/minions-workflows"
+deploy_url: null
+last_active: 2026-02-23
+tags: [minion, toolbox, ai-agent, automation, minions, workflows]
+notes: null
+id: 55bc534f-7e8c-4a00-8b59-06cd9a9b1338
